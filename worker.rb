@@ -2,5 +2,8 @@
 
 require 'pp'
 
-pp ENV
+File.open("/tmp/#{$$}", "w") do |f|
+  f.puts(ENV.pretty_inspect)
+end
+
 sleep
